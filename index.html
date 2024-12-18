@@ -1,18 +1,107 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="pt">
+<head>
+  <title>Meus exemplos de criação</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<h2>HTML Forms</h2>
+    body {
+      font-family: Verdana, Geneva, sans-serif;
+    }
 
-<form action="teste.html">
-  <label for="fname">Primeiro nome:</label><br>
-  <input type="text" id="fname" name="fname" value="Lorrana"><br>
-  <label for="lname">Segundo nome:</label><br>
-  <input type="text" id="lname" name="lname" value="Gabriela"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+    /* Estilo para o cabeçalho */
+    header {
+      background-color: #555;
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      color: #fff;
+    }
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    /* Criar duas colunas que ficam lado a lado */
+    nav {
+      float: left;
+      width: 30%;
+      height: 300px; /* apenas para demonstração, deve ser removido */
+      background: #ddd;
+      padding: 15px;
+    }
+
+    /* Estilo para a lista dentro do menu */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article {
+      float: left;
+      padding: 15px;
+      width: 70%;
+      background-color: #eaeaea;
+      height: 300px; /* apenas para demonstração, deve ser removido */
+    }
+
+    /* Limpar os elementos flutuantes */
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Estilo para o rodapé */
+    footer {
+      background-color: #666;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* Layout responsivo - faz com que as colunas fiquem empilhadas em telas menores */
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body> 
+
+<h2>Layout CSS com Float</h2>
+<p>Neste exemplo, criamos um cabeçalho, duas colunas/caixas e um rodapé. Em telas menores, as colunas serão exibidas uma abaixo da outra.</p>
+<p>Redimensione a janela do navegador para ver o efeito responsivo (você aprenderá mais sobre isso no próximo capítulo - HTML Responsivo).</p>
+
+<header>
+  <h2>Exemplos</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Exemplos</h1>
+    <p>Alguns exemplos que foram usados para o meu primeiro site.</p>
+    <!-- Adição do formulário -->
+    <form action="novo.html" method="GET">
+      <label for="nome">Seu nome:</label><br>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome"><br><br>
+      <label for="email">Seu e-mail:</label><br>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail"><br><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </article>
+</section>
+
+<footer>
+  <p>Rodapé</p>
+</footer>
 
 </body>
 </html>
